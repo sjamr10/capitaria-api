@@ -1,6 +1,10 @@
 # Capitaria API
 REST API for Capitaria.
 
+## DB schema
+Here is the db schema:
+[schema.png](schema.png)
+
 ## SQL answers
 You can find the SQL answers here:
 [sql.md](sql.md)
