@@ -1,0 +1,12 @@
+SQLAlchemy==1.4.31
+asyncpg==0.25.0
+fastapi==0.73.0
+pre-commit==2.17.0
+psycopg2==2.9.3
+pydantic==1.9.0
+pytest==7.0.0
+pytest-watch==4.2.0
+python-multipart==0.0.5
+requests==2.27.1
+uvicorn==0.17.4
+black==22.1.0
