@@ -48,3 +48,19 @@ class EnrollmentRead(EnrollmentBase):
 
     class Config:
         orm_mode = True
+
+
+class TestBase(BaseModel):
+    name: str = Field(..., min_length=5, max_length=50)
+    course_id: int
+
+
+class TestCreate(TestBase):
+    pass
+
+
+class TestRead(TestBase):
+    id: int
+
+    class Config:
+        orm_mode = True
