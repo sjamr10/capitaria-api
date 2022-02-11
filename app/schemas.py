@@ -32,3 +32,19 @@ class CourseRead(CourseBase):
 
     class Config:
         orm_mode = True
+
+
+class EnrollmentBase(BaseModel):
+    student_id: int
+    course_id: int
+
+
+class EnrollmentCreate(EnrollmentBase):
+    pass
+
+
+class EnrollmentRead(EnrollmentBase):
+    id: int
+
+    class Config:
+        orm_mode = True
