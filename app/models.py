@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, Numeric, String
 
 from app.database import Base
 
@@ -39,3 +39,12 @@ class Test(Base):
     id = Column(Integer, primary_key=True)
     course_id = Column(Integer, ForeignKey("courses.id"), nullable=False)
     name = Column(String(50), nullable=False)
+
+
+class Grade(Base):
+    __tablename__ = "grades"
+
+    id = Column(Integer, primary_key=True)
+    student_id = Column(Integer, ForeignKey("students.id"), nullable=False)
+    test_id = Column(Integer, ForeignKey("tests.id"), nullable=False)
+    value = Column(Numeric(2, 1), nullable=False)

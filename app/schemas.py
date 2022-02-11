@@ -64,3 +64,20 @@ class TestRead(TestBase):
 
     class Config:
         orm_mode = True
+
+
+class GradeBase(BaseModel):
+    student_id: int
+    test_id: int
+    value: float = Field(..., ge=1, le=7)
+
+
+class GradeCreate(GradeBase):
+    pass
+
+
+class GradeRead(GradeBase):
+    id: int
+
+    class Config:
+        orm_mode = True
